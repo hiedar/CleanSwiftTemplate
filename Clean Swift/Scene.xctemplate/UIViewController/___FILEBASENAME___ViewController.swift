@@ -60,6 +60,11 @@ class ___VARIABLE_sceneName___ViewController: BaseViewController<___VARIABLE_sce
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "TITLE"
+        
+        containerView.setup(delegate: self)
+
         doSomething()
     }
     
