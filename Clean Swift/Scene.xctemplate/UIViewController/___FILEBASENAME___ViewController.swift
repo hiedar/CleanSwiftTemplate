@@ -16,20 +16,18 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
     func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic {
+class ___VARIABLE_sceneName___ViewController: BaseViewController<___VARIABLE_sceneName___ContainerView>, ___VARIABLE_sceneName___DisplayLogic {
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
     var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
     
     // MARK: Object lifecycle
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    init() {
+        fatalError("You have to implement this method!")
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: Setup
@@ -76,5 +74,11 @@ class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_scen
     
     func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
         //nameTextField.text = viewModel.name
+    }
+}
+
+extension ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___ContainerViewDelegate {
+    func onTapped() {
+        
     }
 }
