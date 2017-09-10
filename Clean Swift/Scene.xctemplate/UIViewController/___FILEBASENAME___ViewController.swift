@@ -21,8 +21,8 @@ class ___VARIABLE_sceneName___ViewController: BaseViewController<___VARIABLE_sce
     var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
     
     // MARK: Object lifecycle
-    init() {
-        fatalError("You have to implement this method!")
+    override init(view: ___VARIABLE_sceneName___ContainerView) {
+        super.init(view: view)
         setup()
     }
 
