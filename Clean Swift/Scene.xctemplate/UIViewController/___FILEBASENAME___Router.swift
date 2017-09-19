@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol ___VARIABLE_sceneName___RoutingLogic {
-    func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController)
+    func routeToSomewhere()
 }
 
 protocol ___VARIABLE_sceneName___DataPassing {
@@ -26,19 +26,19 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     
     // MARK: Routing
     func routeToSomewhere() {
-        let destinationVC = SomewhereViewController()
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToCreateOrder(source: dataStore!, destination: &destinationDS)
-        navigateToCreateOrder(source: viewController!, destination: destinationVC)
+//        let destinationVC = SomewhereViewController()
+//        var destinationDS = destinationVC.router!.dataStore!
+//        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+//        navigateToSomewhere(source: viewController!, destination: destinationVC)
     }
     
     // MARK: Navigation
-    func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController) {
-        source.show(destination, sender: nil)
-    }
+//    func navigateToSomewhere(source: ___VARIABLE_sceneName___ViewController) {
+//        source.show(destination, sender: nil)
+//    }
     
     // MARK: Passing data
-    func passDataToCreateOrder(source: ___VARIABLE_sceneName___DataStore, destination: inout SomewhereDataStore) {
-        
-    }
+//    func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore, destination: inout SomewhereDataStore) {
+//
+//    }
 }
